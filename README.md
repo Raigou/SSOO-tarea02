@@ -1,4 +1,4 @@
 # SSOO-tarea02
-##### Autor: Angel Manuel Armando Araya Millar
-##### Correo: angel.araya@alumnos.uv.cl
-Primero se obtiene la información del json https://api.warframe.market/v1/items utilizando el comando curl
+##### Nombre del autor: Angel Manuel Armando Araya Millar
+##### Correo institucional: angel.araya@alumnos.uv.cl
+Primero se obtiene la información del json https://api.warframe.market/v1/items utilizando el comando **curl**. Posteriormente se se usa **jq** para filtrar los datos que se solicitan, en este caso nos pide **id** e **item_name** que se encuentran dentro de **items** que a su vez se encuentra dentro de **payload**.Ya que se nos pide solamente **id** e **item_name** se eliminan los datos no necesarios, que serian **url_name** y **thumb**, para ello se utiliza el comando **del**. Luego redireccionamos lo obtenido con **>>** a un archivo llamado **items.json**, al realizar esto se *printea* con el comando **echo** la frase **JSON CREADO CON EXITO**, todo lo anterior descrito se ejecuta atraves de un *script* llamado *script.sh* el cual tambien muestra lo obtenido por consola.
